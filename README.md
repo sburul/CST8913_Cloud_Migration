@@ -15,7 +15,7 @@ BOYNER's IT infrastructure was quite fragmented and complex, spread across on-pr
 
 ### Produce a RACI matrix for the migration stakeholders
 
-![BOYNER Migration RACI Matrix](/images/RACI_Matrix.png)
+![BOYNER Migration RACI Matrix](/images/RACI_Matrix.jpg)
 
 #### R - Responsible, A - Accountable, C - Consulted, I - Informed
 
