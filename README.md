@@ -12,10 +12,6 @@ The application consists of two virtual machines: WebServerVM and SQLVM. For hig
 
 ### Explanation of the Target Architecture
 
-<li>Could you provide a detailed info of the current IT infrastructure, including on-premises and cloud components?</li>
-<li>What are the main applications and workloads running on your current infrastructure?</li>
-<li>What is the current level of expertise within your IT Team regarding cloud technologies and platforms</li>
-
 
 ### Containerization of the web application
 
