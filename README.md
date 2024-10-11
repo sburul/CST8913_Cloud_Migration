@@ -26,9 +26,16 @@ Make sure to leverage resources from AWS or GCP
 
 ### Explanation of the Target Architecture
 
-
+We can plan the migration structure of the frontend, backend and database servers in the virtual machines to the AWS cloud system as seen in the target design diagram. 
+We use the Route 53 service, which is one of the AWS services, to direct requests from clients to Active Region.
+At the same time, with Route 53, we can direct requests to the disaster region in case of any disaster scenario.
+It is designed to use Amazon S3 service on the AWS cloud for on-premise front-end servers.
+AWS Elastic Load Balancer was used to control the load distribution of incoming requests.
+A three-tier architecture was planned, and the front-end, back-end, and database layers were offered in three different tiers.
+Each of these layers has been created as an auto-scaling group, creating an architecture that can be scaled up and down according to the current demand.
 
 ### Migration Process
+
 
 #### 1. Pre-Migration Planning
 
