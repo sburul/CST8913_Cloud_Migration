@@ -30,26 +30,34 @@ We can plan the migration structure of the frontend, backend and database server
 We use the Route 53 service, which is one of the AWS services, to direct requests from clients to Active Region.
 At the same time, with Route 53, we can direct requests to the disaster region in case of any disaster scenario.
 It is designed to use Amazon S3 service on the AWS cloud for on-premise front-end servers.
+AWS Lambda: Hosts the API in containers or serverless functions for auto-scaling.
 AWS Elastic Load Balancer was used to control the load distribution of incoming requests.
 A three-tier architecture was planned, and the front-end, back-end, and database layers were offered in three different tiers.
 Each of these layers has been created as an auto-scaling group, creating an architecture that can be scaled up and down according to the current demand.
+A different passive region was created for the disaster scenario and database replication working with an asynchronous structure was made ready. With database replication, RDS in the active region continuously updates the database in the Disaster region. Route 53 directs incoming traffic to the disaster region in any disaster, ensuring system availability.
+
 
 ### Migration Process
 
-
 #### 1. Pre-Migration Planning
 
+The existing infrastructure is examined, requirements are determined, configurations are planned, performance measurements are completed and the existing application and infrastructure are evaluated comprehensively.Additionally, it’s essential to identify potential risks and challenges associated with the migration, such as downtime and data integrity issues.
 
 #### 2. Setup Cloud Environment
 
+When planning a cloud infrastructure, establishing a robust cloud infrastructure specifically designed for e-commerce applications is a priority. The necessary IAM roles and policies must be defined to manage access permissions for services that will be used in the cloud infrastructure. Resources such as Amazon S3 for static assets, Amazon RDS for the database, and Elastic Load Balancers for traffic distribution must be provisioned and configured according to best practices. A different region is created for the disaster scenario and the replica of the system is kept in this region. In case of any disaster, the system is routed to the disaster region using AWS Route 53.
 
 #### 3. Data Migration
 
+Data migration is critical in projects with high service availability, such as e-commerce applications.During database transfer, SQL database transfer can be performed without interruption by using AWS Database Migration Service. In addition, database consistency is tested after the migration is completed.
 
 #### 4. Application Layer Migration
 
 
 #### 5. Testing
+
+
+#### 6. Rollback Strategy
 
 
 
