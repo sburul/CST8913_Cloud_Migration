@@ -53,12 +53,18 @@ Data migration is critical in projects with high service availability, such as e
 
 #### 4. Application Layer Migration
 
+In application layer migration, the frontend is migrated to the Amazon S3 service. The AWS Lamda service to be used for the backend is configured according to the application architecture and the application is migrated to this service. In addition, the auto-scaling feature is activated and the service is scaled according to the incoming demand. Comprehensive testing will be performed to validate functionality, performance, and integration with the new architecture, ensuring a smooth user experience post-migration.
 
 #### 5. Testing
 
+The Testing phase is essential to ensure that the migrated eCommerce application functions correctly and meets performance expectations in the cloud-native environment. 
+Integration tests, unit tests and user acceptance tests, which are among the test methodologies and enable end-to-end testing of the system, are performed.
+Additionally, load tests are performed to check the performance of the system under user traffic.
+All errors and problems identified during comprehensive tests will be documented and used during system aenhancement and improvement.
 
 #### 6. Rollback Strategy
 
+If any issues occur during migration, a rollback strategy will be implemented to quickly revert to the previous database state, preserving the performance and reliability of the application.
 
 
 
